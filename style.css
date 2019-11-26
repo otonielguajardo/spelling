@@ -41,7 +41,7 @@ p {
 }
 
 button {
-	width: 90px;
+	width: 140px;
 }
 
 button,
@@ -52,5 +52,5 @@ input {
 }
 
 h1 {
-	font-size: 150px;
+	font-size: 90px;
 }

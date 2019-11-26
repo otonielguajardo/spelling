@@ -35,6 +35,15 @@ $(document).on("click", "#next", function(e) {
 	$("#counter").text(counter + 1 + " of " + words.length);
 });
 
+// prev
+$(document).on("click", "#prev", function(e) {
+	e.preventDefault();
+	counter--;
+	console.log({ counter });
+	$("#word").text(words[counter]);
+	$("#counter").text(counter + 1 + " of " + words.length);
+});
+
 $(document).on("click", "#start", function(e) {
 	e.preventDefault();
 	$("#menu").css("display", "none");
