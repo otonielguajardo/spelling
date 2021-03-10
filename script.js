@@ -1,24 +1,24 @@
 var counter = 0;
 
 // init
-$(document).ready(function() {
+$(document).ready(function () {
 	init();
-
-	console.log(words);
+	// console.log(words);
 	// $("#rainbowList").rainbow();
 });
 
 function init() {
+	counter = 0;
 	$("#menu").css("display", "block");
 	$("#game").css("display", "none");
 	$("#word-list").empty();
-	$.each(words, function(key, val) {
+	$.each(words, function (key, val) {
 		$("#word-list").append("<li>" + val + "</li>");
 	});
 }
 
 // start
-$(document).on("click", "#start", function(e) {
+$(document).on("click", "#start", function (e) {
 	e.preventDefault();
 	$("#menu").css("display", "none");
 	$("#game").css("display", "block");
@@ -27,7 +27,7 @@ $(document).on("click", "#start", function(e) {
 });
 
 // next
-$(document).on("click", "#next", function(e) {
+$(document).on("click", "#next", function (e) {
 	e.preventDefault();
 	counter++;
 	console.log({ counter });
@@ -36,7 +36,7 @@ $(document).on("click", "#next", function(e) {
 });
 
 // prev
-$(document).on("click", "#prev", function(e) {
+$(document).on("click", "#prev", function (e) {
 	e.preventDefault();
 	counter--;
 	console.log({ counter });
@@ -44,14 +44,14 @@ $(document).on("click", "#prev", function(e) {
 	$("#counter").text(counter + 1 + " of " + words.length);
 });
 
-$(document).on("click", "#start", function(e) {
+$(document).on("click", "#start", function (e) {
 	e.preventDefault();
 	$("#menu").css("display", "none");
 	$("#game").css("display", "block");
 });
 
 // restart
-$(document).on("click", "#restart", function(e) {
+$(document).on("click", "#restart", function (e) {
 	e.preventDefault();
 	init();
 });
